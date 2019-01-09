@@ -1,0 +1,34 @@
+WSGI协议:
+    WSGI协议主要包括server和application两部分
+        server:      调用application的函数 接收body
+        application: 函数(字典,函数名)   字典:各种信息 eg:'PATH-INF':'login'...  函数名:对应server中的函数(状态,heads) (method('200 OK', [('Content-Type', 'text/html;charset=gbk')]))
+
+
+
+
+为程序传参(可以解耦)
+命令窗口: python XXX.py(arg0)  arg1 arg2 ...
+程序:   import sys
+        sys.argv[0/1/2...]
+
+传入模块与函数：
+            模块=__import__(模块参数)
+            函数=getattr(模块,函数参数)
+
+            eg:
+            参数格式:WSGI:application
+            app = sys.argv[2].split(':')
+            mod = __import__(app[0])
+            application = getattr(mod, app[1])
+
+            #假如路径不匹配--在之前追加路径
+            sys.path.append('...')
+
+
+
+
+
+
+
+
+shell 脚本:存储linux命令

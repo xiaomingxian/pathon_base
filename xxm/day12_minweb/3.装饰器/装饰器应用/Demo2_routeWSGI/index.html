@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+
+    <title>T</title>
+</head>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script>
+
+    add = function (id) {
+        $.get('add/' + id + '.py/', function (a) {
+            alert(a)
+            // print()---直接打印
+        })
+    }
+
+    show = function (id) {
+        // window.open('login.html', "newwindow", "height=200, width=200, top=300, left=300,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+        // window.location.href = 'show/' + id + '.py'
+        window.open('show/' + id + '.py')
+        // $.get('show/' + id + '.py', function (a) {
+        //     alert(a)
+        // })
+    }
+
+</script>
+<body>
+<center>
+    <h2>首页...</h2>
+
+
+    content
+
+
+    <br>
+
+    <img src="a.JPG" height="567" width="440"/>
+
+    <br>
+    <a href="login.py">login</a>
+</center>
+</body>
+
+
+</html>

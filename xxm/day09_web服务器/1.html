@@ -1,0 +1,580 @@
+
+<!-- saved from url=(0038)http://localhost:8161/admin/topics.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+    <title>localhost : Topics</title>
+
+    
+    <style type="text/css" media="screen">
+        @import url('/admin/styles/sorttable.css');
+        @import url('/admin/styles/type-settings.css');
+        @import url('/admin/styles/site.css');
+        @import url('/admin/styles/prettify.css');
+    </style>
+    
+        <script type="text/javascript" src="./localhost _ Topics_files/common.js.下载"></script>
+        <script type="text/javascript" src="./localhost _ Topics_files/css.js.下载"></script>
+        <script type="text/javascript" src="./localhost _ Topics_files/standardista-table-sorting.js.下载"></script>
+        <script type="text/javascript" src="./localhost _ Topics_files/prettify.js.下载"></script>
+        <script>addEvent(window, 'load', prettyPrint)</script>
+    
+
+
+</head>
+<body>
+
+
+
+
+
+<div class="white_box">
+    <div class="header">
+        <div class="header_l">
+            <div class="header_r">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_l">
+            <div class="content_r">
+
+                <div>
+
+                    <!-- Banner -->
+                    <div id="asf_logo">
+                        <div id="activemq_logo">
+                            <a style="float:left; width:280px;display:block;text-indent:-5000px;text-decoration:none;line-height:60px; margin-top:10px; margin-left:100px;" href="http://activemq.apache.org/" title="The most popular and powerful open source Message Broker">ActiveMQ</a> ™
+                            <a style="float:right; width:210px;display:block;text-indent:-5000px;text-decoration:none;line-height:60px; margin-top:15px; margin-right:10px;" href="http://www.apache.org/" title="The Apache Software Foundation">ASF</a>
+                        </div>
+                    </div>
+
+
+                    <div class="top_red_bar">
+                        <div id="site-breadcrumbs">
+                            <a href="http://localhost:8161/admin/index.jsp" title="Home">Home</a>
+                            |
+                            <a href="http://localhost:8161/admin/queues.jsp" title="Queues">Queues</a>
+                            |
+                            <a href="http://localhost:8161/admin/topics.jsp" title="Topics">Topics</a>
+                            |
+                            <a href="http://localhost:8161/admin/subscribers.jsp" title="Subscribers">Subscribers</a>
+                            |
+                            <a href="http://localhost:8161/admin/connections.jsp" title="Connections">Connections</a>
+                            |
+                            <a href="http://localhost:8161/admin/network.jsp" title="Network">Network</a>
+                            |
+                             <a href="http://localhost:8161/admin/scheduled.jsp" title="Scheduled">Scheduled</a>
+                            |
+                            <a href="http://localhost:8161/admin/send.jsp" title="Send">Send</a>
+                        </div>
+                        <div id="site-quicklinks"><p>
+                            <a href="http://activemq.apache.org/support.html" title="Get help and support using Apache ActiveMQ">Support</a></p>
+                        </div>
+                    </div>
+
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top" width="100%" style="overflow:hidden;">
+                                    <div class="body-content">
+
+
+<div>
+<form action="http://localhost:8161/admin/createDestination.action" method="post">
+    <input type="hidden" name="JMSDestinationType" value="topic">
+    <input type="hidden" name="secret" value="7288392f-7f58-4f33-bea8-f04b52d85a39">
+
+    <label name="destination">Topic Name</label>
+    <input type="text" name="JMSDestination" value="">
+
+    <input type="submit" value="Create">
+</form>
+</div>
+
+<h2>Topics</h2>
+
+<table id="topics" class="sortable autostripe">
+<thead>
+<tr>
+<th><a href="http://localhost:8161/admin/topics.jsp#" columnid="0" title="Click to sort">Name</a><span class="tableSortArrow" sortorder="ASC"> ↑</span></th>
+<th><a href="http://localhost:8161/admin/topics.jsp#" columnid="1" title="Click to sort">Number Of Consumers</a><span class="tableSortArrow">&nbsp;&nbsp;</span></th>
+<th><a href="http://localhost:8161/admin/topics.jsp#" columnid="2" title="Click to sort">Messages Enqueued</a><span class="tableSortArrow">&nbsp;&nbsp;</span></th>
+<th><a href="http://localhost:8161/admin/topics.jsp#" columnid="3" title="Click to sort">Messages Dequeued</a><span class="tableSortArrow">&nbsp;&nbsp;</span></th>
+<th><a href="http://localhost:8161/admin/topics.jsp#" columnid="4" title="Click to sort">Operations</a><span class="tableSortArrow">&nbsp;&nbsp;</span></th>
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Connection&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Connection</a></td>
+<td>0</td>
+<td>460</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Connection&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Connection">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Connection">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Connection&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue...&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Queue...</a></td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue...&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue...">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue...">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Queue...&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" ">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-queue&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Queue.my-queue</a></td>
+<td>0</td>
+<td>16</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-queue&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-queue">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-queue">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-queue&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-topic&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Queue.my-topic</a></td>
+<td>0</td>
+<td>16</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-topic&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-topic">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-topic">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.my-topic&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" ">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-queue&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Queue.send-queue</a></td>
+<td>0</td>
+<td>20</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-queue&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-queue">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-queue">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-queue&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-topic&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Queue.send-topic</a></td>
+<td>0</td>
+<td>20</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-topic&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-topic">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-topic">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.send-topic&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" ">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send-map&amp;JMSDestinationType=topic">
+
+
+<span class="tooltip"> ActiveMQ.Advisory.Consumer.Queue.springboot-sen... <span>ActiveMQ.Advisory.Consumer.Queue.springboot-send-map</span></span>
+</a></td>
+<td>0</td>
+<td>84</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send-map&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send-map">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send-map">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send-map&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Queue.springboot-send</a></td>
+<td>0</td>
+<td>108</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Queue.springboot-send&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class="">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-queue&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Topic.my-queue</a></td>
+<td>0</td>
+<td>39</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-queue&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-queue">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-queue">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-queue&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-topic&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Topic.my-topic</a></td>
+<td>0</td>
+<td>39</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-topic&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-topic">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-topic">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.my-topic&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class="">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send-map&amp;JMSDestinationType=topic">
+
+
+<span class="tooltip"> ActiveMQ.Advisory.Consumer.Topic.springboot-sen... <span>ActiveMQ.Advisory.Consumer.Topic.springboot-send-map</span></span>
+</a></td>
+<td>0</td>
+<td>10</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send-map&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send-map">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send-map">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send-map&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Consumer.Topic.springboot-send</a></td>
+<td>0</td>
+<td>10</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Consumer.Topic.springboot-send&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class="">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.MasterBroker&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.MasterBroker</a></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.MasterBroker&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.MasterBroker">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.MasterBroker">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.MasterBroker&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.my-queue&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Producer.Queue.my-queue</a></td>
+<td>0</td>
+<td>80</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.my-queue&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.my-queue">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.my-queue">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Producer.Queue.my-queue&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" ">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send-map&amp;JMSDestinationType=topic">
+
+
+<span class="tooltip"> ActiveMQ.Advisory.Producer.Queue.springboot-sen... <span>ActiveMQ.Advisory.Producer.Queue.springboot-send-map</span></span>
+</a></td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send-map&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send-map">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send-map">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send-map&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Producer.Queue.springboot-send</a></td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Producer.Queue.springboot-send&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class="">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Topic.my-topic&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Producer.Topic.my-topic</a></td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Topic.my-topic&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Topic.my-topic">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Producer.Topic.my-topic">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Producer.Topic.my-topic&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Queue&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Queue</a></td>
+<td>0</td>
+<td>7</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Queue&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Queue">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Queue">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Queue&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" ">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Topic&amp;JMSDestinationType=topic">
+
+
+ActiveMQ.Advisory.Topic</a></td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=ActiveMQ.Advisory.Topic&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=ActiveMQ.Advisory.Topic">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=ActiveMQ.Advisory.Topic">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=ActiveMQ.Advisory.Topic&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=my-queue&amp;JMSDestinationType=topic">
+
+
+my-queue</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=my-queue&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=my-queue">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=my-queue">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=my-queue&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" ">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=my-topic&amp;JMSDestinationType=topic">
+
+
+my-topic</a></td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=my-topic&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=my-topic">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=my-topic">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=my-topic&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=MyTopic&amp;JMSDestinationType=topic">
+
+
+MyTopic</a></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=MyTopic&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=MyTopic">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=MyTopic">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=MyTopic&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" ">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=springboot-send&amp;JMSDestinationType=topic">
+
+
+springboot-send</a></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=springboot-send&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=springboot-send">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=springboot-send">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=springboot-send&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr><tr class=" odd">
+<td><a href="http://localhost:8161/admin/send.jsp?JMSDestination=springboot-send-map&amp;JMSDestinationType=topic">
+
+
+springboot-send-map</a></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>
+    <a href="http://localhost:8161/admin/send.jsp?JMSDestination=springboot-send-map&amp;JMSDestinationType=topic">Send To</a>
+    <a href="http://localhost:8161/admin/topicSubscribers.jsp?JMSDestination=springboot-send-map">Active Subscribers</a><br>
+    <a href="http://localhost:8161/admin/topicProducers.jsp?JMSDestination=springboot-send-map">Active Producers</a><br>
+    <a href="http://localhost:8161/admin/deleteDestination.action?JMSDestination=springboot-send-map&amp;JMSDestinationType=topic&amp;secret=7288392f-7f58-4f33-bea8-f04b52d85a39">Delete</a>
+</td>
+</tr></tbody>
+</table>
+
+
+                                    </div>
+                                </td>
+                                <td valign="top">
+
+                                    <div class="navigation">
+                                        <div class="navigation_top">
+                                            <div class="navigation_bottom">
+                                                <h3>Queue Views</h3>
+
+                                                <ul class="alternate" type="square">
+
+
+
+                                                    <li><a href="http://localhost:8161/admin/queueGraph.jsp" title="View the queue depths as a graph">Graph</a></li>
+                                                    <li><a href="http://localhost:8161/admin/xml/queues.jsp" title="View the queues as XML">XML</a></li>
+                                                </ul>
+                                                <h3>Topic Views</h3>
+
+                                                <ul class="alternate" type="square">
+
+
+
+                                                    <li><a href="http://localhost:8161/admin/xml/topics.jsp" title="View the topics as XML">XML</a></li>
+                                                </ul>
+                                                <h3>Subscribers Views</h3>
+
+                                                <ul class="alternate" type="square">
+
+
+
+                                                    <li><a href="http://localhost:8161/admin/xml/subscribers.jsp" title="View the subscribers as XML">XML</a></li>
+                                                </ul>
+                                                <h3>Useful Links</h3>
+
+                                                <ul class="alternate" type="square">
+                                                    <li><a href="http://activemq.apache.org/" title="The most popular and powerful open source Message Broker">Documentation</a></li>
+                                                    <li><a href="http://activemq.apache.org/faq.html">FAQ</a></li>
+                                                    <li><a href="http://activemq.apache.org/download.html">Downloads</a>
+                                                    </li>
+                                                    <li><a href="http://activemq.apache.org/discussion-forums.html">Forums</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="bottom_red_bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="black_box">
+        <div class="footer">
+            <div class="footer_l">
+                <div class="footer_r">
+                    <div>
+                        Copyright 2005-2015 The Apache Software Foundation.
+
+                        <!--  (<a href="?printable=true">printable version</a>)-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+	
+</body></html>

@@ -1,0 +1,12 @@
+并行:真正的同时运行   cpu的核数>=任务数
+并发:时间片轮转 假的同时运行  cpu的核数<任务数
+
+threading.Thread(target=sing) 调用函数
+threading.Thread(target=sing()) 指明函数位置
+
+
+主线程最后结束
+
+创建线程的几种方式:
+    1.threading.Thread(target=sing) sing是一个函数
+    2.写一个类继承 Thread  重写run 方法   实例.start()

@@ -1,0 +1,11 @@
+2018-10-15 16:13:42,363-Application.py [line:195]-INFO : 访问的 url 是:index.py
+2018-10-15 16:14:33,435-Application.py [line:195]-INFO : 访问的 url 是:index.py
+2018-10-15 16:14:37,757-Application.py [line:195]-INFO : 访问的 url 是:index.py
+2018-10-15 16:15:54,063-Application.py [line:196]-INFO : 访问的 url 是:index.py
+2018-10-15 16:16:29,430-Application.py [line:196]-INFO : 访问的 url 是:index.py
+2018-10-15 16:19:34,435-Application.py [line:196]-INFO : 访问的 url 是:show/2.py
+2018-10-15 16:19:42,258-Application.py [line:196]-INFO : 访问的 url 是:show/ok/2/%E4%B8%AD%E6%96%87%20%20%20%20%20%E8%BF%98%E7%8B%AC%E5%AE%88%E7%A9%BA%E6%88%BF.py
+2018-10-15 16:19:47,242-Application.py [line:196]-INFO : 访问的 url 是:index.py
+2018-10-15 16:23:12,515-Application.py [line:196]-INFO : 访问的 url 是:index.py
+2018-10-15 16:23:47,843-Application.py [line:196]-INFO : 访问的 url 是:index.py
+2018-10-15 16:26:18,359-Application.py [line:196]-INFO : 访问的 url 是:index.py

@@ -1,0 +1,26 @@
+集群知识:
+	集群方式:	
+		客户端集群:让多个消费者消费同一个队列(topic下会造成消息的重复消费)
+		Broker clusters:多个broker之间同步消息，达到服务器负载的可能
+		Master Slave :实现高可用的一种方式,当主服务器宕机时其他服务器补上
+
+	客户端配置:
+		失效转移机制(failover)
+			参数说明:randomize--默认true 表示url列表中选择url连接式是否采用随机策略
+				 initialReconnectDelay -- 默认为10毫秒 表示第一次尝试重连之间的等待时间
+				 maxReconnectDely 默认30000毫秒，最大尝试重连时间
+
+
+
+。。。
+
+Broker Cluster 【【  不高可用  (自己的消息并没有储存--消息可能会同步丢失)           实现了负载均衡(各个节点上的消息可以互相消费)
+
+Master/Slave   【【  高可用master宕机slave层位master补上     			    没有实现负载均衡(只有master节点对外提供服务，，各个节点上的消息不能相互消费)
+	...
+	Shared storage master/slave共享存储 节点获取到消息储存排他锁(资源锁)就成为master否则就成为slaved  --- 当master宕机的时候会释放资源锁 slave获取资源锁成为master
+	Replicated LevelDB Store 基于复制的LevelDB Store(目前activeMq打造的高可用存储引擎)  zk服务器保证连接(至少需要三台服务器来保证zk的稳定性【broker服务器】)
+
+
+
+----》宕机要立即恢复       布置多台服务器来提高可用性(多台宕机仍可用)

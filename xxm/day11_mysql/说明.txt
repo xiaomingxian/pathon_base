@@ -1,0 +1,72 @@
+在一些不可能取值为负数的时候，可以定义为unsigned，
+
+
+
+
+
+---------------------- 建表语句 -------------------
+
+
+decimal(10,4)表示数值中共有几位整数,几位小数?   表示总共10位,其中4位小数,也就是说,整数位是6位
+
+bit 0/1
+
+#去重
+SELECT DISTINCT(brand_name) FROM goods
+
+SELECT brand_name FROM goods GROUP BY brand_name
+
+#将多个字段显示在同一个列中
+SELECT brand_name,GROUP_CONCAT(NAME) FROM goods GROUP BY brand_name
+
+#求平均数 - 保留两位小数
+SELECT ROUND(AVG(price),2) FROM goods
+
+SELECT * FROM goods WHERE price > (SELECT AVG(price) FROM goods)
+#扩展语句
+SELECT * FROM goods WHERE price IN (SELECT MAX(price) FROM goods GROUP BY brand_name) GROUP BY brand_name
+
+SELECT * FROM (SELECT NAME AS iname,MAX(price) AS inprice FROM goods GROUP BY brand_name ) AS itable LEFT JOIN goods AS g ON g.name=itable.iname AND g.price=itable.inprice
+
+#从一张表查询数据插入另一张表中
+INSERT INTO cate (NAME)  (SELECT DISTINCT(cate_name) FROM goods)
+
+#内连接修改字段
+UPDATE goods g INNER JOIN cate c ON g.cate_name=c.NAME SET g.cate_name=c.id
+
+#修改表结构
+#change 修改名字和类型  modify修改类型
+ALTER TABLE goods CHANGE cate_name cate_id INT UNSIGNED NOT null
+#添加外键   CONSTRAINT fk_id  为外键命名
+ALTER TABLE goods ADD CONSTRAINT fk_id FOREIGN KEY(cate_id) REFERENCES cate(id)
+
+*********** 假如 一个表中的字段为varchar 并且有数据  此时如果更改字段类型为 int 所有的值都会变为 0  慎用  ***********
+
+alter table 可更改多个字段  用,隔开
+#创建表的同时  插入数据  (字段名称保持一致)
+CREATE TABLE goods(
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	name VARCHAR(150) NOT NULL
+	) SELECT DISTINCT(cate_name) as name FROM goods
+
+#删除外键
+alter table 表名 drop foregin key 外键名;
+
+---------------------------------------
+CREATE DATABASE pythondb CHARSET=utf8
+
+USE pythondb
+
+CREATE TABLE goods(
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	NAME VARCHAR(150) NOT NULL,
+	cate_name VARCHAR(150) NOT NULL,
+	brand_name VARCHAR(150) NOT NULL,
+	price DECIMAL(10,3) NOT NULL DEFAULT 0,
+	is_show BIT NOT NULL DEFAULT 1,
+	is_saleoff BIT NOT NULL DEFAULT 0
+);
+
+
+
+防止sql注入  cursor.excute(sql，参数)

@@ -1,0 +1,101 @@
+视图(构建一张虚拟的表(把查出来的数据当做一张虚拟的表))(相当于JVM/python解释器 保证跨平台)  数据库结构改了sql语句也不用改
+    create view  视图名 as  select ...  对原表做更改对视图 也起作用
+    drop view 视图名
+
+    好处: 安全性(显示特定字段-避免敏感数据显示)
+         提高重用性
+         对数据库重构不影响程序运行
+         让数据清晰(查询时只需查询视图即可)
+
+
+
+事务
+
+    python代码操作mysql 默认开启了事务  得commit
+    mysql可视界面 sql执行完 默认commit
+
+   *ACID：四大特性:
+            原子性(atomicity)
+            一致性(consistency)
+            隔离性(isolation)
+            持久性(durability)
+   *隔离级别
+    read commited    脏读 重复度 幻读
+    read uncommited  重复度 幻读
+    repeatable read  幻读
+    serilized
+
+
+    开启事务: start transaction/begin
+             ...
+             commit/rollback
+
+索引:一种特殊的文件(里面存储的是其他数据的引用)  数据结构是树
+
+
+SELECT * FROM index_test WHERE NAME='哈20000'
+
+#创建索引
+eg:
+CREATE INDEX myindex ON index_test(NAME(50))
+
+CREATE INDEX index_name ON table_name (column_list)
+
+#显示sql执行时间
+SHOW profiles
+
+
+
+--------------------  账户管理 (数据库权限)--------------------------
+show tables --->mysql --->user --->
+
+
+SHOW DATABASES
+
+USE mysql
+
+SHOW TABLES
+
+DESC USER
+
+SELECT HOST,USER FROM USER
+
+SELECT * FROM USER
+
+
+# 用户xian 主机localhost 密码 123456 对pythondb 下的所有表 只有 select 权限
+GRANT SELECT ON pythondb.* TO 'xian'@'localhost' IDENTIFIED BY '123456'
+
+任意一台机器  所有权限
+GRANT ALL PRIVILEGES ON pythondb.* TO 'xiao'@'%' IDENTIFIED BY '123456'
+
+
+修改权限修改密码 了解
+GRANT SELECT ON pythondb.* TO 'xiao'@'%' WITH GRANT OPTION
+
+FLUSH PRIVILEGES
+
+
+删除用户
+drop user 'xiao'@'%' (推荐)
+或者从 user 表中删除用户记录
+
+---------------  远程连接其他电脑上的 mysql ---------------
+修改  /etc/mysql/mysql.conf.d/mysql.d.cnf
+注释  bind-addr=127.0.0.1
+
+
+
+
+--------------  mysql主从 master-slave -------------------
+自动备份
+读写分离
+负载均衡
+
+
+
+
+
+
+
+

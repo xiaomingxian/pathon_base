@@ -1,0 +1,12 @@
+2018-10-14 14:17:13,928-consol_and_file.py [line:28]-INFO
+2018-10-14 14:17:13,928-consol_and_file.py [line:29]-WARNING
+2018-10-14 14:17:13,928-consol_and_file.py [line:30]-ERROR
+2018-10-14 14:17:13,928-consol_and_file.py [line:31]-CRITICAL
+2018-10-14 14:21:33,860-consol_and_file.py [line:28]-INFO
+2018-10-14 14:21:33,860-consol_and_file.py [line:29]-WARNING
+2018-10-14 14:21:33,860-consol_and_file.py [line:30]-ERROR
+2018-10-14 14:21:33,860-consol_and_file.py [line:31]-CRITICAL
+2018-10-14 14:22:31,012-consol_and_file.py [line:28]-INFO
+2018-10-14 14:22:31,012-consol_and_file.py [line:29]-WARNING
+2018-10-14 14:22:31,012-consol_and_file.py [line:30]-ERROR
+2018-10-14 14:22:31,012-consol_and_file.py [line:31]-CRITICAL

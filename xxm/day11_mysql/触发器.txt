@@ -1,0 +1,81 @@
+
+CREATE TRIGGER trigger_name trigger_time trigger_event ON tb_name FOR EACH ROW trigger_stmt
+trigger_name：触发器的名称
+tirgger_time：触发时机，为BEFORE或者AFTER
+trigger_event：触发事件，为INSERT、DELETE或者UPDATE
+tb_name：表示建立触发器的表明，就是在哪张表上建立触发器
+trigger_stmt：触发器的程序体，可以是一条SQL语句或者是用BEGIN和END包含的多条语句
+所以可以说MySQL创建以下六种触发器：
+BEFORE INSERT,BEFORE DELETE,BEFORE UPDATE
+AFTER INSERT,AFTER DELETE,AFTER UPDATE
+
+
+eg:
+
+
+DELIMITER $
+CREATE TRIGGER insert_triggle AFTER INSERT ON triggle_test FOR EACH ROW
+BEGIN
+	INSERT INTO triggle_log VALUES(NULL,new.name,NOW());
+END $
+DELIMITER ;
+
+
+INSERT INTO triggle_test VALUES(NULL,'tom','男')
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+
+delimiter //
+create trigger InsertUser
+before insert on user
+for each row
+Begin
+    insert into user_group(uid,gid) values(new.uid,'group4444444444');
+
+end;//
+
+delimiter ;
+
+
+
+示例二
+
+delimiter //
+create trigger InsertUser
+before insert on user
+for each row
+Begin
+　　IF new.Type=2 then
+    　　insert into user_group(uid,gid) values(new.uid,'group4444444444');
+　　else
+　　　insert into user_group(uid,gid) values(new.uid,'group55555555555')
+　　END IF;
+ end;//
+
+delimiter ;
+
+
+
+示例三：
+
+delimiter //
+create trigger InsertUser
+before insert on user
+for each row
+Begin
+    IF new.type=1 then
+            insert into user_group(uid,gid) values(new.uid,'578d3369633b47bd9c1fe8bf905cbfb1');
+    END IF;
+    IF new.type=2 then
+            insert into user_group(uid,gid) values(new.uid,'387bcd57fc5a4c3c9de83ee210fef661');
+    END IF;
+end;//
+delimiter ;
+

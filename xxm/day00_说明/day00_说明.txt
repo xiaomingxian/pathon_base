@@ -1,0 +1,10 @@
+cls表示类对象    self表示实例
+
+linux命令
+    ls cd pwd rm cat cp mv mkdir touch tree more top htop ps kill clear history ifconfig ping ssh scp tar chmod(校验权限)
+    shutdown reboot find grep |(管道) >重定向 who whomi man sudo ln man
+
+udp   tcp
+进程(queue-进程间通信) 线程 携程(假的多任务，利用阻塞时间)
+            计算密集型(进程,实现并行) 网络密集型(携程)
+            python解释器 线程是假的     如果利用其他的解释器(java,c)可以实现真正的线程
