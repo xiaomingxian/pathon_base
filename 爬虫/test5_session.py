@@ -1,6 +1,12 @@
 import requests
 
 
+# 解码  python3:
+# response.decode()  utf-8
+# response.decode('gbk')
+# response.content()  获取到的是二进制数据
+# response.text()  获取到的是字符串
+# 模拟登陆的三种方式----
 def main():
     # 模拟一个登陆后才能访问的页面
     # requests  的session模块在内部处理了cookie

@@ -6,8 +6,8 @@ import sys
 def main():
     msg = input()
     # msg=sys.argv[1]#[0是文件名]
-    param = {'query': msg, 'from': 'zh',
-             'to': 'en'}
+    param = {'query': msg, 'from': 'en',
+             'to': 'zh'}
 
     # headars = {
     #     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
@@ -34,4 +34,4 @@ def sys_test():
 
 if __name__ == '__main__':
     main()
-    # sys_test()
+    # sys_test()【-
