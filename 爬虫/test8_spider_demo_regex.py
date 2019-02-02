@@ -23,16 +23,20 @@ class MySpider(object):
         pass
 
     def save(self, message):
+        index = 1
+        s = '【%i】%s'
         for i in message:
             with open('file/duanzi.txt', 'a', encoding='utf8') as f:
-                f.write(i)
+                f.write(s % (index, re.sub('<br/>|<br />', '\n\t', i)))
                 f.write('\r\n')
+                index += 1
                 pass
 
     def run(self):
         for i in range(0, 2):
             # while True:
             content = self.parse_url()
+            # print(content)
             message = self.getMessage(content)
             self.save(message)
             print('-----page: ', self.page)
