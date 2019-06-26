@@ -5,7 +5,7 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import numpy
 
-
+# 基础
 def haveData():
     # -1~1生成50个随机数
     xx = numpy.linspace(-1, 1, 50)
@@ -33,6 +33,7 @@ def haveData():
     # plt.show()
     # fig.savefig('tessstttyyy.png', dpi=100)
 
+# 图像区域
 def figure_use():
     x=numpy.linspace(-1,1,50)
     y1=x**2
@@ -47,12 +48,32 @@ def figure_use():
     plt.plot(x,y1,color='red',linewidth=5.0,linestyle='--')
     plt.show()
 
+# xy轴
+def xy():
+    # -1到5随机50个数字
+    x=numpy.linspace(-1,5,50)
+    y=x**2
+    # xy取值范围
+    plt.xlim(0,5)
+    plt.ylim(0,30)
+    # xy描述
+    plt.xlabel('i am x')
+    plt.ylabel('i am y')
+    # xy轴粒度与描述
+    xticks= numpy.linspace(0,8,5)#0到5分成10段
+    plt.xticks(xticks)
+    # $xxx$数学字体
+    plt.yticks([5,15,25],[r'$good$','very good','pretty good'])
+    plt.plot(x,y)
+    plt.show()
+
 
 
 
 def main():
     # haveData()
-    figure_use()
+    # figure_use()
+    xy()
     pass
 
 
