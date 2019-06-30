@@ -127,12 +127,14 @@ def xy3():
     pass
 
 
+
+
 def main():
     # haveData()
     # figure_use()
-    # xy()
+    xy()
     # xy2()
-    xy3()
+    # xy3()
     pass
 
 
