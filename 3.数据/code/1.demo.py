@@ -7,19 +7,21 @@ import random
 
 font = {
     "family": "Microsoft YaHei",  # 也可简写为M
-    "weight": "blod",
-    "size": "larger"
+    "weight": "10",
+    "size": "10"
 }
 # windows/linux解决方式
-# matplotlib.rc("font",**font)#对以上font的使用
+matplotlib.rc("font", **font)  # 对以上font的使用
+
+
 # or
 # matplotlib.rc("font",family="Microsoft YaHei",weight='blod',size='larger')
 
 # Windows/mac/linux
-from matplotlib import font_manager
-
-# 实例化一个字体
-fontM = font_manager.FontProperties(fname='/System/Library/Fonts/PingFang.ttc')#还可以设置大小等属性
+# from matplotlib import font_manager
+#
+# # 实例化一个字体
+# fontM = font_manager.FontProperties(fname='/System/Library/Fonts/PingFang.ttc')#还可以设置大小等属性
 
 
 # 天气
@@ -33,8 +35,8 @@ def main():
     _x = list(x)[::3]  # 步长为3 从开始到结束
     _xtick_labels = ["10点{}分".format(i) for i in range(60)]
     _xtick_labels += ["11点{}分".format(i - 60) for i in range(60, 120)]
-    # plt.xticks(x[::3], _xtick_labels[::3], rotation=45)  # rotation旋转角度
-    plt.xticks(x[::3], _xtick_labels[::3], rotation=45, fontproperties=fontM)  # rotation旋转角度
+    plt.xticks(x[::3], _xtick_labels[::3], rotation=45)  # rotation旋转角度
+    # plt.xticks(x[::3], _xtick_labels[::3], rotation=45, fontproperties=fontM)  # rotation旋转角度
 
     plt.show()
     pass
