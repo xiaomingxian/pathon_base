@@ -116,17 +116,15 @@ def xy3():
     # scatter画散点图
     plt.scatter(x0, y0, s=50, color='b')
     # [两个横坐标][两个纵坐标]-->[x0,x0],[y0,0]
-    plt.plot([x0,x0],[0,y0],'k--',lw=2.5)
-    #annotion 标注点
+    plt.plot([x0, x0], [0, y0], 'k--', lw=2.5)
+    # annotion 标注点
     # plt.annotate(r'my annotion=%s'%y0,xy=(x0,y0),xycoords='data',xytext=(+5,+16))#相对于(0,0)进行偏移
-    plt.annotate(r'my annotion=%s'%y0,xy=(x0,y0),xycoords='data',xytext=(+18,-8),textcoords='offset points'
-                 ,fontsize=8,arrowprops=dict(arrowstyle='->',connectionstyle='arc3,rad=.2'))#相对于(poit)进行偏移
+    plt.annotate(r'my annotion=%s' % y0, xy=(x0, y0), xycoords='data', xytext=(+18, -8), textcoords='offset points'
+                 , fontsize=8, arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=.2'))  # 相对于(poit)进行偏移
 
     # plt.legend()
     plt.show()
     pass
-
-
 
 
 def main():
