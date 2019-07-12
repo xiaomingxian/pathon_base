@@ -41,7 +41,7 @@ def tiaoxt_shu():
     x = ['加勒比海盗', '功夫熊猫', '玩具总动员', '钢铁侠', '蜘蛛侠', '变形金刚']
     y = [33, 11, 23, 14, 88, 49]
 
-    plt.bar(range(len(x)), y,width=0.4)
+    plt.bar(range(len(x)), y, width=0.4)
 
     plt.xticks(range(len(x)), x, fontproperties=fontM)
 
@@ -53,7 +53,7 @@ def tiaoxt_heng():
     x = ['加勒比海盗', '功夫熊猫', '玩具总动员', '钢铁侠', '蜘蛛侠', '变形金刚']
     y = [33, 11, 23, 14, 88, 49]
     # 横坐标变成了y轴
-    plt.barh(range(len(x)), y,height=0.3)
+    plt.barh(range(len(x)), y, height=0.3)
     plt.yticks(range(len(x)), x, fontproperties=fontM)
     # 网格
     plt.grid(alpha=0.3)
@@ -61,11 +61,41 @@ def tiaoxt_heng():
     pass
 
 
+# 多列条形图
+def moreLie():
+    # 电影数据
+    films = ['玩具总动员', '钢铁侠', '蜘蛛侠', '变形金刚']
+    # 评分数据--每一组表示一个指标
+    values_1 = [100, 200, 234, 120]
+    values_2 = [180, 130, 432, 360]
+    values_3 = [202, 120, 204, 220]
+
+    # 间隔
+    barwidth = 0.2
+    # 横坐标粒度---递增偏移
+    h1 = list(range(len(films)))
+    h2 = [i + barwidth for i in h1]
+    h3 = [i + barwidth * 2 for i in h1]
+
+    # 条形图显示--宽度是间隔宽度--label图例
+    plt.bar(h1, values_1, width=barwidth, label='15日')
+    plt.bar(h2, values_2, width=barwidth, label='16日')
+    plt.bar(h3, values_3, width=barwidth, label='17日')
+
+    # 显示图例
+    plt.legend(prop=fontM, loc='best')
+
+    # 横坐标-中文显示-选h2逻辑居中
+    plt.xticks(h2, films, fontproperties=fontM)
+
+    plt.show()
+
+
 def main():
     # sandian()
     # tiaoxt_shu()
-    tiaoxt_heng()
-
+    # tiaoxt_heng()
+    moreLie()
     pass
 
 
