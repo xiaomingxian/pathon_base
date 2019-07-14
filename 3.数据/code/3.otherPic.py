@@ -91,11 +91,36 @@ def moreLie():
     plt.show()
 
 
+# 频率/频数 分布直方图
+# 适合原始数据[eg:用户年龄分布,一段时间内用户点击次数,用户活跃时间分布]
+def pinShu():
+    data = [20, 24, 23, 41, 44, 40, 44, 44, 50, 32, 29, 38, 39, 80, 77, 76, 62, 66, 69, 73, 74, 12, 23, 54, 56, 67, 19,
+            23, 58]
+    # 组距
+    zj = 4
+    # 组数--组数得是整数否则会有偏差
+    zs = int((max(data) - min(data)) / zj)
+    # 频数
+    # plt.hist(data, zs)
+    # 频率
+    plt.hist(data, zs, density=True)  # normed=True matplotlib 2.1版本
+    # x轴刻度显示--max值为了包含最大值  max(data) + zj[最大值得加上组距]
+    plt.xticks(list(range(min(data), max(data) + zj))[::zj])
+
+    # 显示网格
+    plt.grid(alpha=0.5)
+
+    plt.show()
+
+    pass
+
+
 def main():
     # sandian()
     # tiaoxt_shu()
     # tiaoxt_heng()
-    moreLie()
+    # moreLie()
+    pinShu()
     pass
 
 
