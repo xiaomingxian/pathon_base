@@ -1,6 +1,9 @@
 import numpy as np
 
+import random
 
+
+# 数组测试
 def shap_test():
     # 一维(x,)
     # 二维(x,x)
@@ -33,5 +36,67 @@ def shap_test():
     pass
 
 
+# numpy 一个在python中做科学计算的基础库,重在数值计算,也是大部分python科学计算的基础库
+# 多用在大型 多维数组上执行数值运算
+def numpyTest():
+    # 创建数组--三种方式
+    array1 = np.array([1, 2, 3, 4])
+    array2 = np.array(range(1, 6))
+    array3 = np.arange(1, 10, 2)  # start,end,步长
+    print("类型：", type(array1), " 元素类型：", array1.dtype, array1)
+    print(type(array2), array1.dtype, array2)
+    print(type(array3), array1.dtype, array3)
+
+    # 创建数组--指定dtype
+    array4 = np.array(range(1, 8), dtype=float)
+    print(array4.dtype, array4)
+
+    # 调整数据类型
+    array5 = np.array([1, 0, 1, 0, 1, 0], dtype=bool)
+    print("调整前：", array5.dtype, array5)
+    array5_1 = array5.astype('int')
+    print("调整后：", array5_1.dtype, array5_1)
+
+    # 随机数  round(random.random(),3)保留3位小数，不指定默认没有小数
+    x = [round(random.random(), 3) for i in range(1, 5)]
+    print(x)
+    pass
+
+
+# 多维数组的轴
+# eg:二维数组 (shape(1,2)) 0,1轴；；三维数组(shape(2,2,3))0,1,2轴
+def axis_test():
+    # 数组转制
+    a1=np.arange(0,10).reshape((2,5))
+    # 1-T属性(表示转制)
+    # ta1=a1.T
+    # 2-指定轴反转 eg:二维数组的0/1轴反转
+    # ta1=a1.swapaxes(1,0)
+    # 3-转制方法
+    ta1=a1.transpose()
+    print(ta1)
+    pass
+
+
+# 本地文件读取
+def local_file():
+    uk = '../result/uk.csv'
+    us = '../result/us.csv'
+
+    # skiprows跳过某一行从1开始    unpack行列旋转true为列展示
+    ukdata = np.loadtxt(uk, delimiter=',', dtype='int', skiprows=1)
+    usdata = np.loadtxt(us, delimiter=',', dtype='int', skiprows=1)
+    usdata2 = np.loadtxt(us, delimiter=',', dtype='int', skiprows=1, unpack=True)
+
+    print(ukdata)
+    print(usdata)
+    print('*' * 100)
+    print(usdata2)
+    pass
+
+
 if __name__ == '__main__':
-    shap_test()
+    # shap_test()
+    # numpyTest()
+    # local_file()
+    axis_test()
