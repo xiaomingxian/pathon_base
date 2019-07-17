@@ -67,13 +67,13 @@ def numpyTest():
 # eg:二维数组 (shape(1,2)) 0,1轴；；三维数组(shape(2,2,3))0,1,2轴
 def axis_test():
     # 数组转制
-    a1=np.arange(0,10).reshape((2,5))
+    a1 = np.arange(0, 10).reshape((2, 5))
     # 1-T属性(表示转制)
     # ta1=a1.T
     # 2-指定轴反转 eg:二维数组的0/1轴反转
     # ta1=a1.swapaxes(1,0)
     # 3-转制方法
-    ta1=a1.transpose()
+    ta1 = a1.transpose()
     print(ta1)
     pass
 
@@ -95,8 +95,37 @@ def local_file():
     pass
 
 
+# 索引和切片
+def index_slice():
+    # 4行5列
+    array1 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]).reshape((4, 5))
+    # 取行
+    print('*' * 30, '取某一行', '*' * 30)
+    print(array1[0])  # 取第一行
+    print('*' * 30, '取连续的行', '*' * 30)
+    print(array1[2:])  # 不包含2-取2,3索引(即3，4行数据)
+    print('*' * 30, '取不连续的行', '*' * 30)
+    print(array1[[2, 3]])  # 取不连续的行
+    print('*' * 30, '取列', '*' * 30)
+    print(array1[:, 3])  # 第4列
+    print('*' * 30, '取连续的列', '*' * 30)
+    print(array1[:, 3:])  # 从第四列往后
+    print('*' * 30, '取不连续的列', '*' * 30)
+    print(array1[:, [1, 2, 4]])  # 每一行的3列
+    print('*' * 30, '行列-定位到一个元素', '*' * 30)
+    print(array1[3, 2])
+    print('*' * 30, '取多行多列', '*' * 30)
+    print(array1[[1, 2, 3], [2, 3, 4]])  # 2,3,4行-3,4,5列
+    print(array1[2:4, 3:5])  # 连续列取值
+
+    # print(array1[2:4, 3:5:2])  # 也可以加步长 行列都适用
+
+    pass
+
+
 if __name__ == '__main__':
     # shap_test()
     # numpyTest()
     # local_file()
-    axis_test()
+    # axis_test()
+    index_slice()
