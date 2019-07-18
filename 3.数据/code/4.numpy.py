@@ -120,6 +120,28 @@ def index_slice():
 
     # print(array1[2:4, 3:5:2])  # 也可以加步长 行列都适用
 
+
+def ohter():
+    array1 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]).reshape((4, 5))
+    array1[:, 2:4] = 0  # 将2-4索引列赋值为0
+    print(array1)
+
+    print(array1 < 10)  # ture false
+    print(array1[array1 < 10])  # 取数组中小于10的部分
+    array1[array1 < 10] = 3  # 将小于10的赋值3
+    print(array1)
+
+    # 三元运算符 格式
+    x = np.where(array1 < 10, 5, 11)
+    print(x)
+
+    # 裁剪---小于等于4的替换为4；大于等于10的替换为10
+    xx = array1.clip(4, 10)
+    print(xx)
+
+    xxx=array1.astype(float)
+    xxx[3,4]=np.nan
+    print(xxx)
     pass
 
 
@@ -128,4 +150,5 @@ if __name__ == '__main__':
     # numpyTest()
     # local_file()
     # axis_test()
-    index_slice()
+    # index_slice()
+    ohter()
