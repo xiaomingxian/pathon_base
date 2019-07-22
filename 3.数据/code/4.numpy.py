@@ -3,6 +3,10 @@ import numpy as np
 import random
 
 
+# numpy-api
+# https://www.runoob.com/numpy/numpy-tutorial.html
+
+
 # 数组测试
 def shap_test():
     # 一维(x,)
@@ -78,11 +82,12 @@ def axis_test():
     pass
 
 
+uk = '../result/uk.csv'
+us = '../result/us.csv'
+
+
 # 本地文件读取
 def local_file():
-    uk = '../result/uk.csv'
-    us = '../result/us.csv'
-
     # skiprows跳过某一行从1开始    unpack行列旋转true为列展示
     ukdata = np.loadtxt(uk, delimiter=',', dtype='int', skiprows=1)
     usdata = np.loadtxt(us, delimiter=',', dtype='int', skiprows=1)
@@ -139,9 +144,33 @@ def ohter():
     xx = array1.clip(4, 10)
     print(xx)
 
-    xxx=array1.astype(float)
-    xxx[3,4]=np.nan
+    xxx = array1.astype(float)
+    xxx[3, 4] = np.nan
     print(xxx)
+    pass
+
+
+# 数组拼接--行列交换
+def arrayConcat():
+    ukdata = np.loadtxt(uk, delimiter=',', dtype='int', skiprows=1)
+    usdata = np.loadtxt(us, delimiter=',', dtype='int', skiprows=1)
+    # 竖直拼(上下)
+    vstack = np.vstack((ukdata, usdata))
+    print(vstack)
+    print('--' * 50)
+    hstack = np.hstack((ukdata, usdata))
+    print(hstack)
+    # ---------行列交换
+    print('--' * 50)
+    array = np.arange(0, 12).reshape(3, 4)
+    # 交换行-[1,2行交换]
+    array[[0, 1], :] = array[[1, 0], :]
+    print('-' * 50, '->交换行')
+    print(array)
+    print('-' * 50, '->交换列')
+    array[:, [2, 3]] = array[:, [3, 2]]
+    print(array)
+
     pass
 
 
@@ -151,4 +180,5 @@ if __name__ == '__main__':
     # local_file()
     # axis_test()
     # index_slice()
-    ohter()
+    # ohter()
+    arrayConcat()
