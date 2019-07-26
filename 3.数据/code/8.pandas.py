@@ -1,6 +1,11 @@
 import pandas as pd
 import string
 import numpy as np
+from matplotlib import pyplot as plt
+
+import matplotlib
+
+matplotlib.use('TkAgg')
 
 
 # pandas与numpy的区别
@@ -132,6 +137,36 @@ def other():
     dos = pd.DataFrame(dogs)
     dos = dos.sort_values(by='count', ascending=False)
     print('按大到小排序取前5：\n', dos.head(5))
+
+
+def movie_demo():
+    #
+    movies = pd.read_csv('../result/movie.csv')
+    # 读取列数据
+    runTime = movies['runTime'].values
+    # 最大值
+    max_val = runTime.max()
+    # 最小值
+    min_val = runTime.min()
+    print(max_val - min_val)
+    # 组距
+    zj = 40
+    # 整数除法
+    zs = (max_val - min_val) // zj
+
+    print(zs)
+
+    # 图形设置
+    plt.figure(figsize=(10, 8), dpi=80)
+    # 柱状图
+    plt.hist(runTime, zs)
+    # 横轴
+    plt.xticks()
+    # 网格
+    plt.grid(alpha=0.3)
+
+    plt.show(range(min_val, max_val + zj, zj))
+
     pass
 
 
@@ -139,4 +174,5 @@ if __name__ == '__main__':
     # base()
     # other()
     # erwei()
-    indexAndSlice()
+    # indexAndSlice()
+    movie_demo()

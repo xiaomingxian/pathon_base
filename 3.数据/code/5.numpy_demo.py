@@ -61,5 +61,5 @@ def othertest():
 
 
 if __name__ == '__main__':
-    # append0_1()
-    othertest()
+    append0_1()
+    # othertest()
