@@ -7,8 +7,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import MinMaxScaler
 # 标准化
 from sklearn.preprocessing import StandardScaler
+# 缺失值
+from sklearn.preprocessing import Imputer
 # 中文分词库
 import jieba
+
+import numpy as np
 
 
 # pip，numpy版本得对应
@@ -105,6 +109,19 @@ def stander():
     pass
 
 
+# 缺失值
+def queshi():
+    # pandas中的缺失值是float类型
+    # Nan/nan
+    im = Imputer(missing_values='NaN', strategy='mean', axis=0)
+
+    data = im.fit_transform([[1, 2], [np.NaN, 4], [5, 9]])
+
+    print(data)
+
+    pass
+
+
 # 对中文进行分词 拼接
 def chinese():
     y1 = '可迭代对象都具有__iter__函数，并且可迭代对象通过iter()函数会返回一个迭代器，迭代器内部具有一个状态，该状态用于记录当前迭代所在的位置方便下一次迭代';
@@ -139,4 +156,5 @@ if __name__ == '__main__':
     # parse_chines()
     # tf_idf()
     # guiyi()
-    stander()
+    # stander()
+    queshi()
