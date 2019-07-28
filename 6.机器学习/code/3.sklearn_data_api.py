@@ -1,5 +1,5 @@
 # 鸢尾属植物 分类 库  Iris plants dataset
-from sklearn.datasets import load_iris, fetch_20newsgroups,load_boston
+from sklearn.datasets import load_iris, fetch_20newsgroups, load_boston
 # 数据测试
 from sklearn.model_selection import train_test_split
 
@@ -30,7 +30,7 @@ def load_iris_demo():
 def train_test():
     risi = load_iris()
     # 被划分的样本数据集  被划分的样本标签  测试数据集占比
-    # 返回值  训练集数据 测试集数据  训练集标签   测试集标签
+    # 返回值 训练集特征值 测试集特征值  训练集目标值  测试集目标值
     d_train, d_test, l_train, l_test = train_test_split(risi.data, risi.target, test_size=0.25)
     print(d_train)
     print(l_train)
@@ -56,9 +56,9 @@ def fetch_test():
 # -------------------------------- 以上都是分类算法测试 [数据是离散类型的] 以下为回归算法测试[数据是连续类型的]
 
 def huigui():
-    lb=load_boston()
-    print('特征值：\n',lb.data)
-    print('目标值：\n',lb.target)
+    lb = load_boston()
+    print('特征值：\n', lb.data)
+    print('目标值：\n', lb.target)
     print(lb.DESCR)
     pass
 
