@@ -1,7 +1,8 @@
 # 朴素贝叶斯
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.datasets import fetch_20newsgroups
-from sklearn.model_selection import train_test_split
+# GridSearchCV 交叉验证
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.feature_extraction.text import TfidfVectorizer
 # 准确率-召回率
 from sklearn.metrics import classification_report
@@ -45,6 +46,9 @@ def main():
     # -------------------精确率与召回率[类型检测-不适合此处案例]
     print('精确率：', classification_report(mb_test, article_type, target_names=news.target_names))  # 预测值，目标值  文章类别字符串
     # precision精确率  recall召回率  f1-score得分  support样本数量
+
+
+
     pass
 
 

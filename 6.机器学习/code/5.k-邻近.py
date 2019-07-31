@@ -1,5 +1,6 @@
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import train_test_split
+# 交叉验证  GridSearchCV
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import random
@@ -59,15 +60,35 @@ def main():
     tz_train = sta.fit_transform(tz_train)
     tz_test = sta.transform(tz_test)
     # kjl实例化------调参 调k值  #超参数(算法实例化时的参数)
-    kn = KNeighborsClassifier(n_neighbors=5)
+    # kn = KNeighborsClassifier(n_neighbors=5)
+    # 交叉验证
+    kn = KNeighborsClassifier()
     #
-    kn.fit(tz_train, mb_train)
-    # 得出预测结果
-    res = kn.predict(tz_test)
-    print('结果：\n', res, '\n数量：', len(res))
-    # 得出准确率
-    score = kn.score(tz_test, mb_test)  # 输入 训练集特征 为了得到预测值 与 目标测试集进行比对
-    print('得分：', score)
+    # kn.fit(tz_train, mb_train)
+    # # 得出预测结果
+    # res = kn.predict(tz_test)
+    # print('结果：\n', res, '\n数量：', len(res))
+    # # 得出准确率
+    # score = kn.score(tz_test, mb_test)  # 输入 训练集特征 为了得到预测值 与 目标测试集进行比对
+    # print('得分：', score)
+
+    # -------------------交叉测试验证[网格验证]
+    # 构造超参数  k近邻的k值 进行测试时算法实例如果设置了超 参数就会以算法实例的超参数为准 以下参数不生效
+    param = {'n_neighbors': [3, 5, 10]}
+    gr = GridSearchCV(kn, param_grid=param, cv=2)  # 算法实例，构造的参数,n折交叉
+    gr.fit(tz_train, mb_train)
+
+    # 预测结果
+    print('在测试集上的准确率：\n', gr.score(tz_test, mb_test))
+
+    print('在交叉验证中的最好结果：\n', gr.best_score_)
+
+    print('选择的最好模型：\n', gr.best_estimator_)
+
+    # 此处 cv=2 有两次交叉验证
+    print('每个超参数每次交叉验证的结果：\n', gr.cv_results_)
+
+    print(len(gr.cv_results_))
     pass
 
 
