@@ -15,7 +15,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 # 交互式 无需开启session tf.InteractiveSession()  a.eval()
 # 只要有上下文环境都可以使用eval()
 # 张量：数组 tensor类型 名字/形状/数据类型 #tensorflow的基本格式
-#
+# API位置--[算数运算符,基本数学运算符,矩阵运算,减少维度的运算(求平均值),序列运算]
+# https://www.tensorflow.org/version/r1.0/api_guides/python/math_ops
 def main():
     # 图
     a = tf.constant(5.0, )
@@ -82,10 +83,36 @@ def main():
         zes = tf.compat.v1.zeros([2, 3], dtype=tf.float32)  # ones
         print(zes)
         # 随机值张量
-        
+        rand = tf.random_normal([3, 4], mean=3, stddev=3, dtype=tf.float32, seed=None, name='test')
+        print('随机张量-->', rand.eval())
+        # 类型转换
+        cast_val = tf.cast([[2, 3], [4, 3], [5, 6]], tf.float32)
+        print(cast_val.eval())
+        # 数据合并--行/列
+        a = [[1, 1], [2, 2], [3, 3]]
+        b = [[4, 5], [6, 7], [8, 9]]
+        lie = tf.concat([a, b], axis=1)
+        print(lie.eval())
+        hang = tf.concat([a, b], axis=0)
+        print(hang.eval())
+
         pass
     pass
 
 
+# 变量--是一种op,是一种特殊的张量，能够进行持久化存储，他的值就是张量，默认被训练
+def variables():
+    # var = tf.Variable(initial_value=1, name='variable_test', trainable=True)
+    var = tf.Variable(tf.compat.v1.random_normal(shape=[2, 3], mean=3, stddev=2))
+
+    # 必须显示化的初始化
+    init_op = tf.compat.v1.global_variables_initializer()
+    with tf.compat.v1.Session() as sess:
+        sess.run(init_op)
+        print(sess.run(var))
+    pass
+
+
 if __name__ == '__main__':
-    main()
+    # main()
+    variables()
