@@ -11,6 +11,7 @@ tensorflow:
     后端系统:运算图结构
 
 
+tensorboard可视化：  # python -m tensorboard.main --logdir="/Users/xxm/develop/py_workspace/python_base/7.深度学习/pic"
 
 
 
