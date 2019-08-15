@@ -1,4 +1,5 @@
 import tensorflow as tf
+import os
 
 
 # 队列同步模拟
@@ -66,10 +67,48 @@ def anscy():
         # 回收线程资源
         coord.join(threads)
         pass
+    pass
+
+
+def csvfileansy():
+    # 构造文件路径资源数组
+    dir = '../file/fake_data/'
+    files = os.listdir(dir)
+    filepaths = [os.path.join(dir, file) for file in files]
+
+    # 1-构造文件队列
+    file_queue = tf.train.string_input_producer(filepaths)
+    # 2-构造csv阅读器读取队列数据(按一行)
+    reader = tf.TextLineReader()
+
+    k, v = reader.read(file_queue)
+    # 对内容解码--为什么只能2列
+    record = [['None'], ['None']]  # 得是二维-只能2列：['默认值填补空缺'] eg:[[1],[1.0],[True],['None']]
+    # n列
+    c1, c2 = tf.decode_csv(v, record_defaults=record)
+
+    # 批处理----batch_size每批次多少数据
+    c1, c2 = tf.train.batch([c1, c2], batch_size=20, num_threads=3, capacity=3)
+
+    # session
+    with tf.compat.v1.Session() as sess:
+        # 线程协调器
+        coord = tf.train.Coordinator()
+
+        threads = tf.train.start_queue_runners(sess, coord=coord)
+
+        # 打印读取的内容
+        print(sess.run([c1, c2]))
+        # 回收线程
+        coord.request_stop()
+        coord.join(threads)
+
+        pass
 
     pass
 
 
 if __name__ == '__main__':
     # tongbu()
-    anscy()
+    # anscy()
+    csvfileansy()
