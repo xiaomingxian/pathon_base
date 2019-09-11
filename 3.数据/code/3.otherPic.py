@@ -41,7 +41,7 @@ def tiaoxt_shu():
     x = ['加勒比海盗', '功夫熊猫', '玩具总动员', '钢铁侠', '蜘蛛侠', '变形金刚']
     y = [33, 11, 23, 14, 88, 49]
 
-    plt.bar(range(len(x)), y,width=0.4)
+    plt.bar(range(len(x)), y, width=0.4)
 
     plt.xticks(range(len(x)), x, fontproperties=fontM)
 
@@ -53,7 +53,7 @@ def tiaoxt_heng():
     x = ['加勒比海盗', '功夫熊猫', '玩具总动员', '钢铁侠', '蜘蛛侠', '变形金刚']
     y = [33, 11, 23, 14, 88, 49]
     # 横坐标变成了y轴
-    plt.barh(range(len(x)), y,height=0.3)
+    plt.barh(range(len(x)), y, height=0.3)
     plt.yticks(range(len(x)), x, fontproperties=fontM)
     # 网格
     plt.grid(alpha=0.3)
