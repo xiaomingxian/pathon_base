@@ -61,11 +61,66 @@ def tiaoxt_heng():
     pass
 
 
+# 多列条形图
+def moreLie():
+    # 电影数据
+    films = ['玩具总动员', '钢铁侠', '蜘蛛侠', '变形金刚']
+    # 评分数据--每一组表示一个指标
+    values_1 = [100, 200, 234, 120]
+    values_2 = [180, 130, 432, 360]
+    values_3 = [202, 120, 204, 220]
+
+    # 间隔
+    barwidth = 0.2
+    # 横坐标粒度---递增偏移
+    h1 = list(range(len(films)))
+    h2 = [i + barwidth for i in h1]
+    h3 = [i + barwidth * 2 for i in h1]
+
+    # 条形图显示--宽度是间隔宽度--label图例
+    plt.bar(h1, values_1, width=barwidth, label='15日')
+    plt.bar(h2, values_2, width=barwidth, label='16日')
+    plt.bar(h3, values_3, width=barwidth, label='17日')
+
+    # 显示图例
+    plt.legend(prop=fontM, loc='best')
+
+    # 横坐标-中文显示-选h2逻辑居中
+    plt.xticks(h2, films, fontproperties=fontM)
+
+    plt.show()
+
+
+# 频率/频数 分布直方图
+# 适合原始数据[eg:用户年龄分布,一段时间内用户点击次数,用户活跃时间分布]
+def pinShu():
+    data = [20, 24, 23, 41, 44, 40, 44, 44, 50, 32, 29, 38, 39, 80, 77, 76, 62, 66, 69, 73, 74, 12, 23, 54, 56, 67, 19,
+            23, 58]
+    # 组距
+    zj = 4
+    # 组数--组数得是整数否则会有偏差
+    zs = int((max(data) - min(data)) / zj)
+    # 频数
+    # plt.hist(data, zs)
+    # 频率
+    plt.hist(data, zs, density=True)  # normed=True matplotlib 2.1版本
+    # x轴刻度显示--max值为了包含最大值  max(data) + zj[最大值得加上组距]
+    plt.xticks(list(range(min(data), max(data) + zj))[::zj])
+
+    # 显示网格
+    plt.grid(alpha=0.5)
+
+    plt.show()
+
+    pass
+
+
 def main():
     # sandian()
     # tiaoxt_shu()
-    tiaoxt_heng()
-
+    # tiaoxt_heng()
+    # moreLie()
+    pinShu()
     pass
 
 

@@ -23,8 +23,8 @@ def main():
     # 绘制网格  alpha透明度 粒度根据横轴纵轴粒度而定
     plt.grid(alpha=0.4)
     # 填充数据
-    plt.plot(x, y, color='cyan', label='汤姆',linewidth=0.7)
-    plt.plot(xx, yy, color='blue', label='杰瑞',linewidth=0.7)
+    plt.plot(x, y, color='cyan', label='汤姆', linewidth=0.7)
+    plt.plot(xx, yy, color='blue', label='杰瑞', linewidth=0.7)
 
     # 显示
     plt.legend(prop=fontM, loc='best')

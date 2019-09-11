@@ -29,7 +29,7 @@ def main():
     x = range(0, 120)
     # 产生120个[20-35]范围的随机数,并放到列表
     y = [random.randint(20, 35) for i in range(120)]
-    plt.figure(figsize=(20, 10), dpi=80)
+    plt.figure(figsize=(14, 9), dpi=80)
     plt.plot(x, y)
     # xy轴的粒度--中文显示
     _x = list(x)[::3]  # 步长为3 从开始到结束
