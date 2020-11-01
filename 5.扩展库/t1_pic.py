@@ -1,4 +1,6 @@
-# from PIL import Image
+from PIL import Image
+import pytesseract
+
 
 def main():
     pass
