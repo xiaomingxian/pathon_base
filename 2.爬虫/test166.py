@@ -3,12 +3,12 @@ from queue import Queue
 import threading
 import os
 
-SAVE_DIR_PATH = 'D:\\landchina'
+SAVE_DIR_PATH = 'C:\\Users\\仙\\Desktop\\2'
 
 
 def prepare_links():
     queue = Queue()
-    with open('C:\\Users\\仙\\Desktop\\links_pure.txt', 'r') as infile:
+    with open('C:\\Users\\仙\\Desktop\\1\\links_pure.txt', 'r') as infile:
         for line in infile.readlines():
             queue.put(line)
     print('共有链接', queue.qsize(), '个')
@@ -28,7 +28,7 @@ def download(queue):
             print(url, '下载成功!')
 
 
-def main():
+def main() -> object:
     queue = prepare_links()
     if queue and queue.qsize() > 0:
         threads = []
